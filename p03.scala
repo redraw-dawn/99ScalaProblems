@@ -11,9 +11,9 @@ object problem3 {
     println("result: " + nth(2, List(1, 1, 2, 3, 5, 8)))
   }
 
-  def nth(num: Int, ls: List[Int]): Int = {
+  def nth[A](num: Int, ls: List[A]): A = {
     if (num < 0 || ls.length <= num)
-      -1
+      throw new IllegalArgumentException("Cannot have a list shorter than n")
     else if (num == 0)
       ls.head
     else
