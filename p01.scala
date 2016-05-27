@@ -11,11 +11,11 @@ object problem1 {
     println("result: " + last(List(1, 1, 2, 3, 5, 8)))
   }
 
-  def last(ls: List[Int]): Int = {
+  def last[A](ls: List[A]): A = {
     ls match {
       case x :: Nil => x
       case x :: xs => last(xs)
-      case Nil => -1
+      case Nil => throw new IllegalArgumentException("Cannot pass empty list to last")
     }
   }
 }
