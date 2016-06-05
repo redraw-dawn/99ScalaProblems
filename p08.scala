@@ -17,10 +17,10 @@ object problem8 {
         case Nil => accum
         case a :: b :: bs =>
           if (a == b) loop(b :: bs, accum)
-          else loop(b :: bs, a :: accum)
-        case x :: Nil => x :: accum
+          else loop(b :: bs, accum ::: List(a))
+        case x :: Nil => accum ::: List(x)
       }
     }
-    loop(ls, Nil).reverse
+    loop(ls, Nil)
   }
 }
