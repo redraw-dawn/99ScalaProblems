@@ -15,8 +15,13 @@ object problem9 {
     def pack[A](ls: List[A]): List[List[A]] = {
       def loop(ls: List[A], buildingList: List[A], accum: List[List[A]]): List[List[A]] = {
         ls match {
-          
-        }
+          case Nil => accum
+          case x :: Nil => 
+          case a :: b :: bs =>
+            if (a == b) 
+              }
+        // maybe instead of PM use a function which counts how many there are of the same in a row an i.e.
+        // takeWhile coul be used?
       }
       loop(ls, Nil, Nil)
     }
