@@ -12,7 +12,7 @@ object p14 {
     println(duplicate(List('a, 'b, 'c, 'c, 'd)))
   }
 
-  def duplicate[A](ls: List[A]): List[A] = {
+  private def duplicate[A](ls: List[A]): List[A] = {
     ls match {
       case Nil => Nil
       case x :: xs => x :: x :: duplicate(xs)
