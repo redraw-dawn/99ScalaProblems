@@ -15,15 +15,10 @@ object p17 {
   }
 
   private def split[A](num: Int, ls: List[A]): (List[A], List[A]) = {
-    def loop(num: Int, ls: List[A], collect: List[A]): (List[A], List[A]) = {
-      ls match {
-        case Nil =>
-          (Nil, Nil)
-        case x :: xs if num > 1 =>
-          loop(num - 1, xs, collect ::: x :: Nil)
-        case x :: xs =>
-          (collect ::: x :: Nil, xs)
-      }
+    def loop(num: Int, ls: List[A], result: List[A]): (List[A], List[A]) = (num, ls) match {
+      case (_, Nil) => (Nil, Nil)
+      case (0, l) => (result, l)
+      case (y, x :: xs) => loop(y - 1, xs, result ::: List(x))
     }
     loop(num, ls, Nil)
   }
