@@ -1,3 +1,5 @@
+package problems
+
 // P15 (**) Duplicate the elements of a list a given number of times.
 // Example:
 

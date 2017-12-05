@@ -1,3 +1,5 @@
+package problems
+
 // P05 (*)
 // Reverse a list.
 // Example:

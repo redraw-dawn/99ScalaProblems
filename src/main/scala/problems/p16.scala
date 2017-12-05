@@ -1,3 +1,5 @@
+package problems
+
 // P16 (**) Drop every Nth element from a list.
 // Example:
 

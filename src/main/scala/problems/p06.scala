@@ -1,3 +1,5 @@
+package problems
+
 // P06 (*)
 // Find out whether a list is a palindrome.
 // Example:

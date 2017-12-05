@@ -1,3 +1,5 @@
+package problems
+
 // P17 (*) Split a list into two parts.
 // The length of the first part is given. Use a Tuple for your result.
 

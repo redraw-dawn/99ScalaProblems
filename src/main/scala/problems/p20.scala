@@ -1,3 +1,5 @@
+package problems
+
 // P20 (*) Remove the Kth element from a list.
 // Return the list and the removed element in a Tuple. Elements are numbered from 0.
 // Example:

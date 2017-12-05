@@ -1,3 +1,5 @@
+package problems
+
 // P07 (**)
 // Flatten a nested list structure.
 // Example:
@@ -17,7 +19,7 @@ object problem7 {
       case x :: xs => x match {
         case y :: ys => flatten(y::ys) ::: flatten(xs)
         case z => z :: flatten(xs)
-      } 
+      }
     }
   }
 }

@@ -1,3 +1,5 @@
+package problems
+
 // P14 (*) Duplicate the elements of a list.
 // Example:
 
