@@ -11,13 +11,16 @@ import util.Util._
   * Hint: Use the solution to problem P20
   */
 
-class Problem23 extends Problem[Int] {
-  // Comparing on size [Int] as result is supposed to be random List[Symbol]
+class Problem23 extends ProblemWithValidation[List[Symbol]] {
   val number = 23
-  val expectedAnswer = List('e, 'd, 'a).size
-  val actualAnswer = randomSelect(3, List('a, 'b, 'c, 'd, 'f, 'g, 'h)).size
+  val expectedAnswer = List('g, 'd, 'a)
+  val actualAnswer = randomSelect(3, originalArgument)
 
-  private lazy  val r = scala.util.Random
+  protected def validation =
+    actualAnswer.size == 3 && actualAnswer.forall(originalArgument.contains)
+
+  private lazy val originalArgument = List('a, 'b, 'c, 'd, 'f, 'g, 'h)
+  private lazy val r = scala.util.Random
   private lazy val problem20 = new Problem20
 
   def randomSelect[A](num: Int, ls: List[A]): List[A] = {

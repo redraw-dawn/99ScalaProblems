@@ -17,4 +17,14 @@ object Util {
       println(s"Correct: ${isCorrect}")
     }
   }
+
+  trait ProblemWithValidation[T] extends Problem[T] {
+    protected def validation: Boolean
+
+    override def isCorrect = validation
+    override def logResult: Unit = {
+      println("N.B. Answers for this question are not exact and are validated instead")
+      super.logResult
+    }
+  }
 }
