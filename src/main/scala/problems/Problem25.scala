@@ -17,7 +17,7 @@ class Problem25 extends ProblemWithValidation[List[Symbol]] {
 
   protected def validation =
     actualAnswer.size == expectedAnswer.size &&
-  expectedAnswer.forall(actualAnswer.contains)
+      expectedAnswer.forall(actualAnswer.contains)
 
   def randomPermute[A](ls: List[A]): List[A] =
     new Problem23().randomSelect(ls.size, ls)
