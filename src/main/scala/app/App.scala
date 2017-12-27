@@ -29,7 +29,8 @@ object App extends App {
     new Problem21,
     new Problem22,
     new Problem23,
-    new Problem24
+    new Problem24,
+    new Problem25
   )
 
   allProblems.foreach { problem =>
